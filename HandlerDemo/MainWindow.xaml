@@ -3,10 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HandlerDemo"
+        xmlns:local="clr-namespace:HandlerDemo"  DataContext="{Binding Main, Source={StaticResource Locator}}"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <TextBox x:Name="txtNumber" Height="25" Width="300" Text="{Binding BR.TxTNumber,UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Height="25" Width="300" Content="Click" Command="{Binding ClickUP}" CommandParameter="{Binding ElementName=txtNumber,Path=Text}"/>
+        <TextBlock Height="25" Width="300" Text="{Binding BR.StrResult, UpdateSourceTrigger=PropertyChanged}"/>
+
+    </StackPanel>
 </Window>
