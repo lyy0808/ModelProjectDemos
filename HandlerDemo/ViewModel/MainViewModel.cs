@@ -38,7 +38,13 @@ namespace HandlerDemo.ViewModel
         }
         private void GetTheResult(string str)
         {
-
+            br.TxTNumber = int.Parse(str);
+            RoleAbstract manger = new ManagerRole("经理");
+            RoleAbstract vp = new PresidentRole("副经理");
+            RoleAbstract pre = new PresigengtRole("总经理");
+            manger.NextRole = vp;
+            vp.NextRole = pre;
+            manger.Behaviour(br);
         }
     }
 }
