@@ -9,9 +9,12 @@ using System.Windows;
 
 namespace HandlerDemo
 {
-    /// <summary>
-    /// App.xaml 的交互逻辑
-    /// </summary>
+    ///-------------------------------------------------------------------------------------------------
+    /// <summary>   An application. </summary>
+    ///
+    /// <remarks>   Billly, 2017:06:03 23:03:56. </remarks>
+    ///-------------------------------------------------------------------------------------------------
+
     public partial class App : Application
     {
         static App()
